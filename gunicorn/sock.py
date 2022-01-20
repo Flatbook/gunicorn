@@ -72,7 +72,7 @@ class BaseSocket(object):
         self.sock = None
 
     def get_backlog(self):
-        return 0
+        return None 
 
 
 class TCPSocket(BaseSocket):
@@ -103,7 +103,8 @@ class TCPSocket(BaseSocket):
                 return struct.unpack(fmt, tcp_info_struct)[12]
             except AttributeError:
                 pass
-        return 0
+
+        return None 
 
 class TCP6Socket(TCPSocket):
 
