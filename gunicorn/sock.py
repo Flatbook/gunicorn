@@ -9,6 +9,7 @@ import socket
 import stat
 import sys
 import time
+import struct
 
 from gunicorn import util
 PLATFORM = sys.platform
